@@ -31,7 +31,7 @@ let age=20;
 let obj = {
     name,
     age,
-    display(){
+    display:function(){
         return `Name: $(this.name)
         and
         Age: $(this.age)`
@@ -51,29 +51,30 @@ let obj1 = {
         },2000);    
     }
 }
-
+console.log(obj1.display());
 //the above way is asynchronous so the second this refers to window object 
 //the solution is to use bind method shown as follows
 let obj2 = {
-    name:surya,
+    name,
     age,
     display(){
         console.log(this)
         setTimeout(function(){
             console.log("Inside timeout function",this)
-        },bind(this),2000);    
+        }.bind(this),2000);    
     }
 }
-
+console.log(obj2.display());
 //or we can use a arrow function instead of using the bind as follows
 
 let obj3 = {
-    name:object3,
+    name,
     age,
     display(){
         console.log(this)
         setTimeout(()=>{
             console.log("Inside timeout function",this)
-        },bind(this),2000);    
+        },2000);    
     }
 }
+console.log(obj3.display());
