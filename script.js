@@ -40,7 +40,6 @@ let obj = {
 
 console.log(obj.display());
 
-
 //setTimeout function
 let obj1 = {
     name,
