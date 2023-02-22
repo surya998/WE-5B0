@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Management</title>
+    <style>
+        table, th, td {
+  border: 1px transparent;
+}
+td{
+    text-align: center;
+}
+body{
+    text-align:center ;
+}
+    </style>
 </head>
 <body>
-    <script src="scripts.js" type="module"></script>
     
+    <h1>Student Management</h1><br><br>
+    <label for="name">Name :</label>
+    <input type="text" id="name">
+    <br><br>
+    <label for="roll">Roll no :</label>
+    <input type="text" id="roll">
+    <br><br>
+    <label for="branch">Branch :</label>
+    <input type="text" id="branch">
+    <br><br>
+    <label for="dob">DOB :</label>
+    <input type="text" id="dob">
+    <br><br>
+    <button id="insert">insert</button>
+    <button id="update">update</button>
+    <button id="read">read</button>
+    <button id="delete">delete</button>
+    <br><br><br>
+    <table id="displayData" style="width: 50%;margin-left: 25%;" ></table>
+
+    <!-- <script src="firebase_config.js"></script> -->
+    <script src="scripts.js" type="module"></script>
 </body>
 </html>
